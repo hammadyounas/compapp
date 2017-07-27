@@ -1,0 +1,15 @@
+ <!-- <ul>
+    <li *ngFor="let list of list">{{list.name}}
+      <br>
+    </li>
+  </ul> -->
+<table>
+  <tr>
+    <th>Student Name</th>
+    <th>delete account</th>
+  </tr>
+  <tr *ngFor="let list of list">
+    <th>{{list.name}}</th>
+    <th><button (click)="deleteStudent(list.email)">remove</button></th>
+  </tr>
+</table>

@@ -1,0 +1,14 @@
+<div class="login">
+  <h1> CV Profile </h1>
+<form [formGroup]="cvform" (ngSubmit)="submitForm(cvform)">
+         <div class="form-group">
+           
+            <input type="text" color="primary" text-align="center" placeholder="full name" mdInput [formControl]="cvform.controls['name']">
+            <input type="text" color="primary" text-align="center" placeholder="CNIC" mdInput [formControl]="cvform.controls['CNIC']">
+            <input type="text" color="primary" text-align="center" placeholder="designation" mdInput [formControl]="cvform.controls['desig']">
+            <input type="text" color="primary" text-align="center" placeholder="institute" mdInput [formControl]="cvform.controls['inst']">
+            <input type="text" color="primary" text-align="center" placeholder="Mobile number" mdInput [formControl]="cvform.controls['numb']">
+            <button  class="btn btn-primary btn-block btn-large">submit</button>
+          </div>
+  </form> 
+</div>

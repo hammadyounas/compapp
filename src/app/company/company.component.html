@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand">Collage App</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a (click)="post()">Add post </a></li>
+        <li><a (click)="viewpost()">view post</a></li>
+        <li><a (click)="candidate()">student list</a></li>
+      </ul>
+      <div class="b1">
+        <button md-fab fxLayoutAlign="right" (click)="logout()">log out</button>
+      </div>
+    </div>
+    <!--/.nav-collapse -->
+    <!--<router-outlet></router-outlet>-->
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+<!-- <div class="container">
+   <h1 style="color: white;">{{newVar}}</h1> 
+  <h1>abcd</h1>
+  <button (click)="clickme()"></button>
+  </div> -->

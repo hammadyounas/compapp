@@ -1,0 +1,17 @@
+ <!-- <ul style="color: black;">
+    <li  *ngFor="let job of jobsarr">{{job.title}}
+      <br>{{job.discp}}
+    </li>
+    <br>
+  </ul>  -->
+  <table>
+    <tr>
+      <th>title</th>
+      <th>discription</th>
+      <th>Apply</th>
+    </tr>
+    <tr *ngFor="let job of jobsarr">
+      <th>{{job.title}}</th>
+      <th>{{job.discp}}</th>
+      <th><button (click)="apply(job.email,job.title)">apply</button></th>
+  </table>

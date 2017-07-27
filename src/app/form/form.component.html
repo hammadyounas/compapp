@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand">Collage App</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+    </div>
+    <!--/.nav-collapse -->
+    <!--<router-outlet></router-outlet>-->
+  </div>
+</nav>
+
+<div class="login">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm)">
+        <div class="form-group">
+            <input type="text" placeholder="Username"  [formControl]="loginForm.controls['email']" />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" placeholder="password"  [formControl]="loginForm.controls['pass']"
+            />
+        </div>
+        <div class="form-group">
+            <button  [disabled]="!loginForm.valid" class="btn btn-primary btn-block btn-large">submit</button>
+        </div>
+    </form>
+
+</div>
+<!-- <div *ngIf="loginstate == true" >
+    <h1>hammad</h1>
+    <a routerLink="/profile"></a>
+</div>
+<router-outlet></router-outlet> -->

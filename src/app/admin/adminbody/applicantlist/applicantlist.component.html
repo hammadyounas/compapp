@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>Student name</th>
+    <th>Job Title</th>
+  </tr>
+  <tr *ngFor="let list of listarr">
+    <th>{{list.studentname}}</th>
+    <th>{{list.title}}</th>
+  </tr>
+</table>
+<button (click)="goback()">back</button>

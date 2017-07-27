@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th>Student Name</th>
+    <th>delete company</th>
+  </tr>
+  <tr *ngFor="let list of list">
+    <th>{{list.compname}}</th>
+    <th><button (click)="deleteCompany(list.email)">remove</button></th>
+  </tr>
+</table>

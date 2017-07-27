@@ -1,0 +1,12 @@
+.b1{
+    margin-left: 1000px;
+}
+body{
+    margin-bottom: 60px;
+}
+body > .container{
+    padding: 60px 15px 0; 
+}
+.container .text-muted {
+  margin: 20px 0;
+}

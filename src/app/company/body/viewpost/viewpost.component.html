@@ -1,0 +1,32 @@
+
+  <!-- viewpost works! -->
+  <div *ngIf="appstate == 'default'">
+   <ul>
+    <li *ngFor="let post of postArr">{{post.title}}
+      <br>{{post.discp}}
+      <br><button (click)="viewCandidate(post.title)">view candidates</button>
+    </li>
+  </ul> 
+  </div>
+<div *ngIf="appstate == 'applicants'">
+  <table>
+    <tr>
+      <th>fullname</th>
+      <th>CNIC</th>
+      <th>mobile</th>
+      <th>email</th>
+      <th>institue</th>
+      <th>designation</th>
+    </tr>
+    <tr *ngFor="let arr of applicantsarr">
+      <th>{{arr.fullname}}</th>
+      <th>{{arr.cnic}}</th>
+      <th>{{arr.numb}}</th>
+      <th>{{arr.mail}}</th>
+      <th>{{arr.inst}}</th>
+      <th>{{arr.desig}}</th>            
+    </tr>
+  </table>
+  <button (click)="goback()">back</button>
+</div>
+

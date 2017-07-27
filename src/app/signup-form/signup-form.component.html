@@ -1,0 +1,62 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand">Collage App</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+    </div>
+    <!--/.nav-collapse -->
+    <!--<router-outlet></router-outlet>-->
+  </div>
+</nav>
+
+
+
+<div class="login">
+    <h1>Sign up</h1>
+    <form [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm)">
+        <div class="form-group">
+            <input  type="text" placeholder="username"  [formControl]="signupForm.controls['username']"/>
+        </div>
+        <div class="form-group">
+            <input  type="text" placeholder="email"  [formControl]="signupForm.controls['email']"/>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="password"  [formControl]="signupForm.controls['pass']"/>
+        </div>
+        <div class="form-group">
+            <input type="radio" name="gender" value="male" [formControl]="signupForm.controls['gender']">male
+            <input type="radio" name="gender" value="Female" [formControl]="signupForm.controls['gender']">Female
+            
+        <!--<md-radio-group [(ngModel)]="gender">
+            <md-radio-button value="male"  name="gender" [formControl]="signupForm.controls['gender']">male</md-radio-button>
+            <md-radio-button value="female" name="gender"  [formControl]="signupForm.controls['gender']">female</md-radio-button>
+        </md-radio-group>-->
+        </div>
+        <div class="form-group">
+        <md-radio-group>
+            
+        </md-radio-group>
+        </div>
+        <div class="form-group">
+            <md-checkbox [formControl]="signupForm.controls['school']" >school</md-checkbox>
+            <md-checkbox [formControl]="signupForm.controls['company']">company</md-checkbox>
+        </div>
+        <div class="form-group" *ngIf="signupForm.value.school == true">
+            <input type="text"  placeholder="schoolname" [formControl]="signupForm.controls['schoolname']"/>
+        </div>
+        <div class="form-group" *ngIf="signupForm.value.company == true">
+            <input type="text"  placeholder="organizationname" [formControl]="signupForm.controls['compname']"/>
+        </div>
+        <div class="form-group">
+            <button  class="btn btn-primary btn-block btn-large">submit</button>
+        </div>
+    </form>
+</div>

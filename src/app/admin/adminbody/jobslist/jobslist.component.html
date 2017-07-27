@@ -1,0 +1,11 @@
+ <table>
+    <tr>
+      <th>title</th>
+      <th>discription</th>
+      <th>Delete Job</th>
+    </tr>
+    <tr *ngFor="let job of jobsarr">
+      <th>{{job.title}}</th>
+      <th>{{job.discp}}</th>
+      <th><button (click)="removeJob(job.email,job.title)">remove</button></th>
+  </table>
